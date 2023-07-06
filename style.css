@@ -1,0 +1,266 @@
+*{
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+body{
+    background-color: rgb(87, 93, 95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contenedor{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background-color: #fff;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor .lado-der{
+    position: relative;
+    background-color: #003147;
+    padding: 40px;
+}
+.perfil{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+
+}
+
+.perfil .imgBox{
+
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.perfil .imgBox img{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 125%;
+    object-fit: cover;
+}
+
+.perfil h2{
+    color: #fff;
+    font-size: 1.5em;
+    margin: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.perfil h2 span{
+    font-size: 0.8;
+    font-weight: 300;    
+
+}
+
+.infoContact{
+    padding-top: 40px;
+}
+.titulo{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+.infoContact ul{
+    position: relative;
+}
+
+.infoContact ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.infoContact ul li .icono{
+    display: inline-block;
+    width: 30px;
+    font-style: 18px;
+    color: deepskyblue;
+}
+.infoContact ul li span{
+    color: white;
+    font-weight: 300;
+    font-size: 15px;
+
+}
+
+.infoContact.educacion li {
+    margin-bottom: 15px;
+
+}
+
+.infoContact.educacion h5{
+    color: #03a9f4;
+    font-weight: 500;
+}
+
+.infoContact.educacion h4:nth-child(2){
+    color: white;
+    font-weight: 500;
+}
+
+.infoContact.educacion h4{
+    color: white;
+    font-weight: 300;
+}
+
+.infoContact.lenguage .porcentaje{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background-color: black;
+    display: block;
+    margin-top: 5px;
+
+}
+
+.infoContact.lenguage .porcentaje div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #03a9f4;
+}
+
+.contenedor .lado-izq{
+    position: relative;
+    background-color: #fff;
+    padding: 40px;
+}
+
+.acercaDe{
+    margin-top: 50px;
+}
+.acercaDe:last-child{
+    margin-bottom: 0;
+}
+.titulo2{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p{
+    color: #333;
+}
+
+.acercaDe .caja{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.acercaDe .caja .compania{
+    min-width: 150px;
+}
+.acercaDe .caja .compania h5{
+    text-transform: uppercase;
+    color: gray;
+    font-weight: 600;
+}
+
+.acercaDe .caja .actividades h4{
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.habilidades .caja{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.habilidades .caja h4{
+    text-transform: uppercase;
+    font-weight: 500;
+    color: gray;
+}
+
+.habilidades .caja .porcentaje{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+
+.habilidades .caja .porcentaje div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+.intereses ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+}
+
+.intereses ul li{
+    list-style: none;
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+
+.intereses ul li .fa{
+    color: #003147;
+    font-size: 18px;
+}
+@media (max-width: 1000px){
+    .comtener
+    {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .intereses ul{
+        grid-template-columns: repeat(1,1fr);
+
+    }
+}
+@media (max-width: 600px){
+    .acercaDe .caja{
+        flex-direction: column;
+    }
+    .acercaDe .caja .compania{
+
+        margin-bottom: 5px;
+    }
+    .intereses ul{
+        grid-template-columns: repeat(1,1fr);
+
+    }
+
+    .habilidades .caja{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+
+}
